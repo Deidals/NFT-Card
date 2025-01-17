@@ -80,16 +80,19 @@ body{
     left: 42%;
 }
 
-.card__cover{
+.card__cover {
     cursor: pointer;
     border-radius: 10px;
     width: 100%;
     aspect-ratio: 1/1;
     position: absolute;
     top: 0;
-
     z-index: 2;
+    
+}
 
+.card__cover:hover {
+    opacity: 1; /* Show the image smoothly */
 }
 
 .card__title{
@@ -169,6 +172,16 @@ body{
     color: var(--Cyan);
 }
 
-.card__cover--cyan{
+.card__cover--cyan {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("images/icon-view.svg");
+    opacity: 0;
     background-color: hsla(178, 100%, 50%, 0);
+    transition: background-color 0.5s ease, opacity 0.5s ease;
+}
+
+.card__cover--cyan:hover {
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 1;
 }
